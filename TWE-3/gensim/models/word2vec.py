@@ -884,10 +884,12 @@ class Word2Vec(utils.SaveLoad):
         kwargs['ignore'] = kwargs.get('ignore', ['syn0norm']) # don't bother storing the cached normalized vectors
         super(Word2Vec, self).save(*args, **kwargs)
 
-    def save_word_vector(self, filename):
+    def save_word_vector(self, filename, id2word):
         with open(filename,"w") as f:
             for i in range(self.word_number):
-                print >> f, i,
+                if i not in id2word:
+                    continue
+                print >> f, id2word[i],
                 vector = self.syn0[i]
                 for j in range(self.layer1_size):
                     print >> f, vector[j],
@@ -895,7 +897,6 @@ class Word2Vec(utils.SaveLoad):
     def save_topic_vector(self, filename):
         with open(filename,"w") as f:
             for i in range(self.topic_number):
-                print >> f, i,
                 vector = self.syn0_topic[i]
                 for j  in range(self.layer_topic_size):
                     print >> f, vector[j],

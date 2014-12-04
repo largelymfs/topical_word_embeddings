@@ -63,7 +63,7 @@ if __name__=="__main__":
     
     topic_number, word_number= gen(sys.argv[2])
     sentences = MyCorpus("tmp/data.tmp")
-    idword = load_wordmap(sys.argv[1])
+    id2word = load_wordmap(sys.argv[1])
     import gensim
     print "Begin Training..."
     w = gensim.models.Word2Vec(sentences,window=5,size=400, workers=4,
@@ -71,6 +71,6 @@ if __name__=="__main__":
                                topic_size=400)
     print "Finish"
     print "Saving the word vector..."
-    w.save_word_vector("output/word_vector.txt")
+    w.save_word_vector("output/word_vector.txt", id2word)
     print "Saving the topic vector..."
     w.save_topic_vector("output/topic_vector.txt")
