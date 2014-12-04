@@ -3,11 +3,11 @@
 ##Requirements
 **Please got the following installed:**
 
-* ####python2
-* ####numpy
-* ####scipy
-* ####cython
-* ####gensim
+* python2
+* numpy
+* scipy
+* cython
+* gensim
  
 
 ##Usage
