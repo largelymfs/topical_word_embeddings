@@ -1,4 +1,10 @@
 topical_word_embeddings
 =======================
 
-A demo code for topical word embedding
+This is the implement for a paper accepted by AAAI2015.
+
+hope to be helpful for your research in NLP and IR.
+
+By Largelymfs
+largelymfs@gmail.com
+
