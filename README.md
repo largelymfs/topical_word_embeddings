@@ -5,7 +5,8 @@ This is the implement for a paper accepted by AAAI2015.
 
 hope to be helpful for your research in NLP and IR.
 
-If you use the code, you should cite the following paper:
+If you use the code, please cite this paper:
+
 Yang Liu, Zhiyuan Liu, Tat-Seng Chua, Maosong Sun. Topical Word Embeddings. The 29th AAAI Conference on Artificial Intelligence (AAAI'15). 
 
 
