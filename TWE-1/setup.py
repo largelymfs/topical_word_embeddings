@@ -61,7 +61,7 @@ setup(
     name = pkg_name,
     version = pkg_ver,
     description = pkg_desc,
-    long_description = read('README.rst'),
+    long_description = read('Readme.md'),
 
     packages = find_packages(exclude=[ pkg_name + '_addons', pkg_name + '_addons.*']),
 

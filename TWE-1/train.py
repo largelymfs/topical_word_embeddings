@@ -19,10 +19,10 @@ if __name__=="__main__":
     topic_number = int(sys.argv[3])
     id2word = pre_process.load_id2word(wordmapfile)
     pre_process.load_sentences(tassignfile, id2word)
-    sentence_word = gensim.models.word2vec.LineSentence("tmp/word.file")
+    sentence_word = gensim.models.word2vec.LineSentence("/tmp/word.file")
     print "Training the word vector..."
     w = gensim.models.Word2Vec(sentence_word,size=400, workers=20)
-    sentence = gensim.models.word2vec.CombinedSentence("tmp/word.file","tmp/topic.file")
+    sentence = gensim.models.word2vec.CombinedSentence("/tmp/word.file","/tmp/topic.file")
     print "Training the topic vector..."
     w.train_topic(topic_number, sentence)
     print "Saving the topic vectors..."
